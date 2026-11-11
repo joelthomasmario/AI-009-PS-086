@@ -1,0 +1,2 @@
+batch_id,product_id,source_id,lot_size,raw_material_lot_id,manufacture_date,expiry_date,released_at,current_state
+RW-001,P001,S001,200,RM-RW-001,2026-01-01T00:00:00,2026-12-31T00:00:00,2026-01-11T10:30:00,RELEASED

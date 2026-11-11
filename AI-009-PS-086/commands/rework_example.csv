@@ -1,0 +1,8 @@
+command,product_id,name,total_shelf_life_days,supplier_id,line_id,batch_id,source_id,source_type,lot_size,raw_material_lot_id,manufacture_date,expiry_date,critical,major,minor,sampled_at,recorded_at,rework_round,reason,action_id,description,complaint_id,timestamp
+REGISTER_PRODUCT,P001,Widget Alpha,365,,,,,,,,,,,,,,,,,,,,,
+REGISTER_SUPPLIER,,Sunrise Manufacturing,,S001,,,,,,,,,,,,,,,,,,,,
+CREATE_BATCH,P001,,,S001,,RW-001,S001,SUPPLIER,200,RM-RW-001,2026-01-01,2026-12-31,,,,,,,,,,,
+BEGIN_INSPECTION,,,,,,RW-001,,,,,,,,,,,,,,,,,2026-01-10T08:00:00
+RECORD_RESULT,,,,,,RW-001,,,,,,,0,2,0,2026-01-10T08:00:00,2026-01-10T09:00:00,0,,,,,,
+REWORK,,,,,,RW-001,,,,,,,,,,,,,,,,,2026-01-11T08:00:00
+RECORD_RESULT,,,,,,RW-001,,,,,,,0,0,1,2026-01-11T10:00:00,2026-01-11T10:30:00,1,,,,,,

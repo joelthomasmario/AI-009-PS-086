@@ -1,0 +1,22 @@
+command,product_id,name,total_shelf_life_days,supplier_id,line_id,batch_id,source_id,source_type,lot_size,raw_material_lot_id,manufacture_date,expiry_date,critical,major,minor,sampled_at,recorded_at,rework_round,reason,action_id,description,complaint_id,timestamp
+REGISTER_PRODUCT,P001,Industrial Valve Type A,365,,,,,,,,,,,,,,,,,,,,,
+REGISTER_PRODUCT,P002,Pressure Sensor Model B,730,,,,,,,,,,,,,,,,,,,,,
+REGISTER_SUPPLIER,,Acme Components Ltd,,S001,,,,,,,,,,,,,,,,,,,,
+REGISTER_SUPPLIER,,Beta Supplies Inc,,S002,,,,,,,,,,,,,,,,,,,,
+REGISTER_LINE,,Assembly Line Alpha,,,L001,,,,,,,,,,,,,,,,,,
+CREATE_BATCH,P001,,,S001,,B001,S001,SUPPLIER,250,RM-2024-001,2026-01-01,2026-12-31,,,,,,,,,,,
+BEGIN_INSPECTION,,,,,,B001,,,,,,,,,,,,,,,,,2026-01-10T08:00:00
+RECORD_RESULT,,,,,,B001,,,,,,,0,1,2,2026-01-10T08:00:00,2026-01-10T09:00:00,0,,,,,,
+CREATE_BATCH,P001,,,S001,,B002,S001,SUPPLIER,300,RM-2024-001,2026-01-05,2027-01-05,,,,,,,,,,,
+BEGIN_INSPECTION,,,,,,B002,,,,,,,,,,,,,,,,,2026-01-11T08:00:00
+RECORD_RESULT,,,,,,B002,,,,,,,0,0,1,2026-01-11T08:00:00,2026-01-11T09:00:00,0,,,,,,
+CREATE_BATCH,P001,,,S001,,B003,S001,SUPPLIER,280,RM-2024-002,2026-01-10,2026-12-10,,,,,,,,,,,
+BEGIN_INSPECTION,,,,,,B003,,,,,,,,,,,,,,,,,2026-01-12T08:00:00
+RECORD_RESULT,,,,,,B003,,,,,,,0,2,3,2026-01-12T08:00:00,2026-01-12T09:00:00,0,,,,,,
+CREATE_BATCH,P001,,,S001,,B004,S001,SUPPLIER,320,RM-2024-002,2026-01-15,2027-01-15,,,,,,,,,,,
+BEGIN_INSPECTION,,,,,,B004,,,,,,,,,,,,,,,,,2026-01-20T08:00:00
+RECORD_RESULT,,,,,,B004,,,,,,,0,3,0,2026-01-20T08:00:00,2026-01-20T09:30:00,0,,,,,,
+HOLD,,,,,,B001,,,,,,,,,,,,,Supplier related batch rejected,,,,2026-01-30T10:00:00
+CREATE_BATCH,P002,,,S002,,B005,S002,SUPPLIER,500,RM-2024-003,2026-01-20,2027-01-20,,,,,,,,,,,
+BEGIN_INSPECTION,,,,,,B005,,,,,,,,,,,,,,,,,2026-01-25T08:00:00
+RECORD_RESULT,,,,,,B005,,,,,,,1,0,0,2026-01-25T08:00:00,2026-01-25T09:00:00,0,,,,,,

@@ -1,0 +1,3 @@
+decision_id,batch_id,product_id,source_id,lot_size,code_letter,severity,sample_size,defects_critical,defects_major,defects_minor,ac_critical,ac_major,ac_minor,re_critical,re_major,re_minor,decision,decision_reason,rule_ids,sampled_at,recorded_at,is_late
+c1065244-ea37-4806-b0dd-ca4fe18123ea,RW-001,P001,S001,200,G,NORMAL,32,0,2,0,0,1,2,1,2,3,REJECTED,MAJOR defects=2 >= Re=2,BR-01|BR-02,2026-01-10T08:00:00,2026-01-10T09:00:00,False
+748b16f2-84c3-4873-bbfe-109ddf13b32a,RW-001,P001,S001,200,G,TIGHTENED,32,0,0,1,0,1,2,1,2,3,ACCEPTED,All defect classes within acceptance limits,BR-01|BR-02,2026-01-11T10:00:00,2026-01-11T10:30:00,False
